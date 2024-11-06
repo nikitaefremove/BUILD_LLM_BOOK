@@ -37,7 +37,7 @@ class SimpleTokenizerV1:
         Returns:
             list: A list of integers representing the encoded text.
         """
-        preprocessed = re.split(r'(?:[,.?_!"()|]|--|\s)+', text)
+        preprocessed = re.split(r'([,.?_!"()\']|--|\s)', text)
         preprocessed = [item.strip() for item in preprocessed if item.strip()]
         ids = [self.str_to_int[s] for s in preprocessed]
 
@@ -54,6 +54,6 @@ class SimpleTokenizerV1:
             str: The decoded text corresponding to the input ids.
         """
         text = " ".join([self.int_to_str[i] for i in ids])
-        text = re.sub(r'\s+([,?.!"()|])', r"\1", text)
+        text = re.sub(r'\s+([,.?!"()\'])', r'\1', text)
 
         return text
