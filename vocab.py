@@ -13,6 +13,7 @@ preprocessed = [item.strip() for item in preprocessed if item.strip()]
 all_words = sorted(set(preprocessed))
 vocab_size = len(all_words)
 
-all_words = sorted(set(preprocessed))
+all_words = sorted(list(set(preprocessed)))
+all_words.extend(["<|endoftext|>", "<|unk|>"])
 
 vocab = {token: integer for integer, token in enumerate(all_words)}

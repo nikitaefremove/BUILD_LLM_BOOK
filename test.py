@@ -1,11 +1,11 @@
-from simple_tokenizer import SimpleTokenizerV1
+from simple_tokenizer_v2 import SimpleTokenizerV2
 from vocab import vocab
 
-tokenizer = SimpleTokenizerV1(vocab)
+tokenizer = SimpleTokenizerV2(vocab)
 
-text = """
-"It's the last he painted, you know,"
-Mrs. Gisburn said with pardonable pride."""
+text1 = "Hello, do you like tea?"
+text2 = "In the sunlit terraces of the palace."
+text = " <|endoftext|> ".join((text1, text2))
 
 ids = tokenizer.encode(text)
 print(ids)
