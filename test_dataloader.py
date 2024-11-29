@@ -22,5 +22,5 @@ dataloader = create_dataloader_v1(
 )
 data_iter = iter(dataloader)
 inputs, targets = next(data_iter)
-print("Inputs:\n", inputs)
-print("\nTargets:\n", targets)
+# print("Inputs:\n", inputs)
+# print("\nTargets:\n", targets)
