@@ -31,3 +31,4 @@ pos_embeddings = pos_embedding_layer(torch.arange(context_length))
 
 input_embeddings = token_embeddings + pos_embeddings
 print(input_embeddings.shape)
+ 
