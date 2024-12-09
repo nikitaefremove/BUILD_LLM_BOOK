@@ -39,4 +39,19 @@ masked = attn_scores.masked_fill(mask.bool(), -torch.inf)
 # masked = attn_scores.masked_fill(mask.bool(), 0.)
 attn_weights = torch.softmax(masked / keys.shape[-1] ** 0.5, dim=-1)
 
-print(attn_weights)
+# print(attn_weights)
+
+import torch.nn as nn
+from causal_attention import CausalAttention
+
+dropout = 0.5
+batch = torch.stack((inputs, inputs), dim=0)
+context_length = batch.shape[1]
+d_in = 3
+d_out = 2
+
+ca = CausalAttention(d_in, d_out, context_length, 0.0)
+context_vecs = ca(batch)
+print("context_vecs.shape:", context_vecs.shape)
+
+print(context_vecs)
