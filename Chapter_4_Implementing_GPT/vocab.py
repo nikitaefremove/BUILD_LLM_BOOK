@@ -17,3 +17,5 @@ all_words = sorted(list(set(preprocessed)))
 all_words.extend(["<|endoftext|>", "<|unk|>"])
 
 vocab = {token: integer for integer, token in enumerate(all_words)}
+
+print(vocab)
