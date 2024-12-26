@@ -1,4 +1,8 @@
+# Environments
 venv
 
-data
+# Cache
 __pycache__/
+
+# Data
+data

@@ -48,13 +48,13 @@ class SimpleTokenizerV2:
 
     def decode(self, ids):
         """
-        Decodes a sequence of integer ids back to the original text.
+        Decodes a sequence of integer ids back into the corresponding text.
 
         Parameters:
-            ids (list): A list of integer ids to be decoded.
+            ids (list): A list of integers representing the encoded text.
 
         Returns:
-            str: The decoded text corresponding to the input ids.
+            str: The decoded text.
         """
         text = " ".join([self.int_to_str[i] for i in ids])
         text = re.sub(r'\s+([,.?!"()\'])', r"\1", text)
