@@ -12,7 +12,7 @@ console_handler.setFormatter(formatter)
 file_handler.setFormatter(formatter)
 
 # Create a logger
-logger = logging.getLogger('formattedLogger')
+logger = logging.getLogger(__name__)
 
 # Set the log level for the logger
 logger.setLevel(logging.DEBUG)

@@ -3,6 +3,23 @@ import torch.nn as nn
 
 
 class MultiHeadAttention(nn.Module):
+    """
+    Implementation of the multi-head attention mechanism.
+
+    Args:
+        d_in (int): Input dimension.
+        d_out (int): Output dimension, must be divisible by num_heads.
+        context_length (int): Length of the input sequence to attend over.
+        dropout (float): Dropout rate for attention weights.
+        num_heads (int): Number of attention heads.
+        qkv_bias (bool, optional): If True, add bias terms to query, key and value projections. Default: False.
+
+    Returns:
+        context_vec (torch.Tensor): The output tensor after applying multi-head attention.
+
+    Raises:
+        AssertionError: If d_out is not divisible by num_heads.
+    """
 
     def __init__(
         self,
@@ -33,6 +50,15 @@ class MultiHeadAttention(nn.Module):
         )
 
     def forward(self, x):
+        """
+        Forward pass through the multi-head attention layer.
+
+        Args:
+            x (torch.Tensor): Input tensor of shape (batch_size, num_tokens, d_in).
+
+        Returns:
+            context_vec (torch.Tensor): Output tensor after applying multi-head attention of shape (batch_size, num_tokens, d_out).
+        """
 
         b, num_tokens, d_in = x.shape
 
