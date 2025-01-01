@@ -5,7 +5,7 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 
 # Create handlers
 console_handler = logging.StreamHandler()
-file_handler = logging.FileHandler('./logs/app.log')
+file_handler = logging.FileHandler('../logs/app.log')
 
 # Set the formatter for the handlers
 console_handler.setFormatter(formatter)

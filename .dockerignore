@@ -1,0 +1,13 @@
+# Environments
+venv
+
+# Cache
+__pycache__/
+
+# Data
+Book
+Chapter_2_Text_Data
+Chapter_3_Attention_Mechanisms
+Chapter_4_Implementing_GPT
+Chapter_5_Pretraining on unlabeled data
+data
