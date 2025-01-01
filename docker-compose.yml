@@ -1,0 +1,11 @@
+services:
+  llm_app:
+    container_name: llm_app
+    build:
+      context: .
+    env_file: .env
+    volumes:
+      - ./logs:/app/logs
+    restart: no
+    ports:
+      - "8000:8000"
