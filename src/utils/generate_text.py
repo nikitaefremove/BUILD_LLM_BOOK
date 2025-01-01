@@ -84,7 +84,7 @@ async def generation_pipeline(text: str) -> str:
 
     token_ids = await generate_text_simple(
         model=model,
-        idx=text_to_token_ids(text=text, tokenizer=tokenizer),
+        idx=await text_to_token_ids(text=text, tokenizer=tokenizer),
         max_new_tokens=10,
         context_size=GPT_CONFIG_124M["context_length"],
     )
