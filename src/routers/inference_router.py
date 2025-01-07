@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 
-from modules.schemas import LLMRequest, LLMResponse
+from schemas.schemas import LLMRequest, LLMResponse
 from core.logger_config import logger
 
 from utils.generate_text import generation_pipeline

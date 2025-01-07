@@ -21,3 +21,4 @@ class LLMResponse(BaseModel):
     """
 
     text: str
+
