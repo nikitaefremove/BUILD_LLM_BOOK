@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
 
-from schemas.schemas import LLMRequest, LLMResponse
+from schemas.inference_schemas import LLMRequest, LLMResponse
 from core.logger_config import logger
 
 from utils.generate_text import generation_pipeline
 
 
-inference_router = APIRouter(tags=["Next Token Prediction"])
+inference_router = APIRouter(tags=["Inference of an Untrained Language Model"])
 
 
 @inference_router.post("/", response_model=LLMResponse)

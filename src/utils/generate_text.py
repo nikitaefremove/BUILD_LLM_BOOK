@@ -8,7 +8,7 @@ tokenizer = tiktoken.get_encoding("gpt2")
 model = GPTModel(cfg=GPT_CONFIG_124M)
 
 
-async def generate_text_simple(model, idx, max_new_tokens, context_size):
+def generate_text_simple(model, idx, max_new_tokens, context_size):
     """
     Generates text using a simple greedy approach.
 
@@ -36,7 +36,7 @@ async def generate_text_simple(model, idx, max_new_tokens, context_size):
     return idx
 
 
-async def text_to_token_ids(text, tokenizer):
+def text_to_token_ids(text, tokenizer):
     """
     Converts a string of text to token IDs.
 
@@ -54,7 +54,7 @@ async def text_to_token_ids(text, tokenizer):
     return encoded_tensors
 
 
-async def token_ids_to_text(token_ids, tokenizer):
+def token_ids_to_text(token_ids, tokenizer):
     """
     Converts a tensor of token IDs to a string of text.
 
@@ -71,7 +71,7 @@ async def token_ids_to_text(token_ids, tokenizer):
     return tokenizer.decode(flat.tolist())
 
 
-async def generation_pipeline(text: str) -> str:
+def generation_pipeline(text: str) -> str:
     """
     Generates text using a pre-trained GPT model.
 
@@ -82,13 +82,13 @@ async def generation_pipeline(text: str) -> str:
         str: The generated text.
     """
 
-    token_ids = await generate_text_simple(
+    token_ids = generate_text_simple(
         model=model,
-        idx=await text_to_token_ids(text=text, tokenizer=tokenizer),
+        idx=text_to_token_ids(text=text, tokenizer=tokenizer),
         max_new_tokens=10,
         context_size=GPT_CONFIG_124M["context_length"],
     )
 
-    output_text = await token_ids_to_text(token_ids=token_ids, tokenizer=tokenizer)
+    output_text = token_ids_to_text(token_ids=token_ids, tokenizer=tokenizer)
 
     return output_text
