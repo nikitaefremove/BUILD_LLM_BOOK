@@ -6,7 +6,6 @@ from utils.generate_text import (
     token_ids_to_text,
 )
 from utils.calc_loss import calc_loss_loader, calc_loss_batch
-# from core.logger_config import logger
 
 
 def train_model_simple(
@@ -66,12 +65,6 @@ def train_model_simple(
                 track_tokens_seen.append(tokens_seen)
 
                 print(
-                    f"Ep {epoch+1} (Step {global_step:06d}): "
-                    f"Train loss {train_loss:.3f}, "
-                    f"Val loss {val_loss:.3f}"
-                )
-
-                logger.info(
                     f"Ep {epoch+1} (Step {global_step:06d}): "
                     f"Train loss {train_loss:.3f}, "
                     f"Val loss {val_loss:.3f}"
@@ -141,6 +134,5 @@ def generate_and_print_sample(model, tokenizer, device, start_context):
 
         decoded_text = token_ids_to_text(token_ids, tokenizer)
         print(decoded_text.replace("\n", " "))
-        logger.info("Decoded Text: ", decoded_text.replace("\n", " "))
 
         model.train()

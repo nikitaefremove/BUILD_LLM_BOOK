@@ -16,7 +16,7 @@ async def llm_inference(request: LLMRequest) -> str:
 
         query = request.text
 
-        response = await generation_pipeline(text=query)
+        response = generation_pipeline(text=query)
 
         return LLMResponse(text=response)
 
