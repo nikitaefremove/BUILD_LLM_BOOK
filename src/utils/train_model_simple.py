@@ -70,6 +70,15 @@ def train_model_simple(
                     f"Val loss {val_loss:.3f}"
                 )
 
+        # Save the weights of the model and optimizer after each epoch
+        torch.save(
+            {
+                "model_state_dict": model.state_dict(),
+                "optimizer_state_dict": optimizer.state_dict(),
+            },
+            "src/model_weights/model_and_optimizer.pth",
+        )
+
         generate_and_print_sample(model, tokenizer, device, start_context)
 
     return train_losses, val_losses, track_tokens_seen
