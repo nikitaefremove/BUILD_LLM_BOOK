@@ -4,6 +4,7 @@ venv
 # Cache
 __pycache__/
 .ipynb_checkpoints/
+.DS_Store
 
 # Data
 data
@@ -11,3 +12,4 @@ data
 logs
 src/logs
 Book
+src/model_weights/model_and_optimizer.pth
