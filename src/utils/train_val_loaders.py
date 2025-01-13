@@ -1,5 +1,4 @@
 import torch
-import torch.nn as nn
 
 from utils.vocab import text_data
 from utils.dataloader import create_dataloader_v1

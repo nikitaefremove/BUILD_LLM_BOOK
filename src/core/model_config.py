@@ -1,6 +1,6 @@
 GPT_CONFIG_124M = {
     "vocab_size": 50257,
-    "context_length": 1024,
+    "context_length": 256,
     "emb_dim": 768,
     "n_heads": 12,
     "n_layers": 12,
@@ -10,7 +10,7 @@ GPT_CONFIG_124M = {
 
 GPT_CONFIG_355M = {
     "vocab_size": 50257,
-    "context_length": 1024,
+    "context_length": 256,
     "emb_dim": 1024,
     "n_heads": 16,
     "n_layers": 24,
@@ -20,7 +20,7 @@ GPT_CONFIG_355M = {
 
 GPT_CONFIG_774M = {
     "vocab_size": 50257,
-    "context_length": 1024,
+    "context_length": 256,
     "emb_dim": 1280,
     "n_heads": 20,
     "n_layers": 36,
@@ -30,7 +30,7 @@ GPT_CONFIG_774M = {
 
 GPT_CONFIG_1558M = {
     "vocab_size": 50257,
-    "context_length": 1024,
+    "context_length": 256,
     "emb_dim": 1600,
     "n_heads": 25,
     "n_layers": 48,

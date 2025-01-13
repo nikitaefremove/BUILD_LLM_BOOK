@@ -1,5 +1,6 @@
 import re
 
+
 filepath = "data/the-verdict.txt"
 
 with open(filepath, "r", encoding="utf-8") as file:

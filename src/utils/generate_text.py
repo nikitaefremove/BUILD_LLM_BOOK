@@ -135,10 +135,10 @@ def generation_pipeline(text: str) -> str:
     token_ids = generate_text(
         model=model,
         idx=text_to_token_ids(text=text, tokenizer=tokenizer),
-        max_new_tokens=15,
+        max_new_tokens=25,
         context_size=GPT_CONFIG_124M["context_length"],
-        top_k=25,
-        temperature=4.4,
+        top_k=50,
+        temperature=1.5,
     )
 
     output_text = token_ids_to_text(token_ids=token_ids, tokenizer=tokenizer)
