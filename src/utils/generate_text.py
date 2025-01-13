@@ -1,11 +1,16 @@
 import tiktoken
 import torch
+
 from utils.models import GPTModel
 from core.model_config import GPT_CONFIG_124M
 
 
 tokenizer = tiktoken.get_encoding("gpt2")
 model = GPTModel(cfg=GPT_CONFIG_124M)
+
+# Load model weights from .pth file if needed.
+state_dict = torch.load("src/model_weights/model_and_optimizer.pth")
+model.load_state_dict(state_dict["model_state_dict"])
 
 
 def generate_text(

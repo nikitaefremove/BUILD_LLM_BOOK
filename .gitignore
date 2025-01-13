@@ -14,3 +14,4 @@ logs
 src/logs
 Book
 src/model_weights/model_and_optimizer.pth
+src/model_weights/gpt2

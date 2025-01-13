@@ -41,6 +41,19 @@ def train_model_simple(
             - val_losses (list): List of validation losses per evaluation frequency.
             - track_tokens_seen (list): List of tokens seen during training per evaluation frequency.
     """
+    checkpoint_path = "src/model_weights/model_and_optimizer.pth"
+    
+    try:
+        checkpoint = torch.load(checkpoint_path)
+        model.load_state_dict(checkpoint["model_state_dict"])
+        optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+        print(f"Checkpoint loaded successfully from {checkpoint_path}")
+        
+    except FileNotFoundError:
+        print(
+            f"No checkpoint found at {checkpoint_path}. Starting training from scratch."
+        )
+
     train_losses, val_losses, track_tokens_seen = [], [], []
     tokens_seen, global_step = 0, -1
 

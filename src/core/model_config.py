@@ -15,7 +15,7 @@ GPT_CONFIG_355M = {
     "n_heads": 16,
     "n_layers": 24,
     "drop_rate": 0.1,
-    "qkv_bias": False,
+    "qkv_bias": True,
 }
 
 GPT_CONFIG_774M = {
@@ -25,7 +25,7 @@ GPT_CONFIG_774M = {
     "n_heads": 20,
     "n_layers": 36,
     "drop_rate": 0.1,
-    "qkv_bias": False,
+    "qkv_bias": True,
 }
 
 GPT_CONFIG_1558M = {
@@ -35,5 +35,5 @@ GPT_CONFIG_1558M = {
     "n_heads": 25,
     "n_layers": 48,
     "drop_rate": 0.1,
-    "qkv_bias": False,
+    "qkv_bias": True,
 }

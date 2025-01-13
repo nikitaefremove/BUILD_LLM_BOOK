@@ -5,3 +5,5 @@ fastapi==0.115.6
 uvicorn==0.34.0
 gunicorn==23.0.0
 matplotlib==3.10.0
+tensorflow==2.18.0
+tqdm==4.67.1
