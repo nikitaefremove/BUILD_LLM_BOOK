@@ -11,8 +11,8 @@ from utils.train_val_loaders import train_loader, val_loader
 
 
 def train(
-    num_epochs: int = 10,
-    learning_rate: float = 0.001,
+    num_epochs: int = 100,
+    learning_rate: float = 0.0004,
     start_context: str = "Every efforts moves you",
 ):
 

@@ -9,7 +9,7 @@ tokenizer = tiktoken.get_encoding("gpt2")
 model = GPTModel(cfg=GPT_CONFIG_124M)
 
 # Load model weights from .pth file if needed.
-state_dict = torch.load("src/model_weights/model_and_optimizer.pth")
+state_dict = torch.load("model_weights/model_and_optimizer.pth")
 model.load_state_dict(state_dict["model_state_dict"])
 
 
