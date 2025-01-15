@@ -2,7 +2,7 @@ import tiktoken
 import torch
 
 from torch.utils.data import DataLoader
-from utils.dataset import SpamDataset
+from utils.data_processing.dataset import SpamDataset
 
 
 torch.manual_seed(123)
@@ -12,13 +12,13 @@ num_workers = 0
 
 # Create Datasets
 train_dataset = SpamDataset(
-    csv_file="fine-tuning/data/train.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/train.csv", tokenizer=tokenizer, max_length=None
 )
 test_dataset = SpamDataset(
-    csv_file="fine-tuning/data/test.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/test.csv", tokenizer=tokenizer, max_length=None
 )
 val_dataset = SpamDataset(
-    csv_file="fine-tuning/data/validation.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/validation.csv", tokenizer=tokenizer, max_length=None
 )
 
 # Create Dataloaders

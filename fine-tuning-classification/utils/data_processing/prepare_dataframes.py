@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-data_file_path = "fine-tuning/data/sms_spam_collection/SMSSpamCollection.tsv"
+data_file_path = "fine-tuning-classification/data/sms_spam_collection/SMSSpamCollection.tsv"
 
 df = pd.read_csv(data_file_path, sep="\t", header=None, names=["Label", "Text"])
 
