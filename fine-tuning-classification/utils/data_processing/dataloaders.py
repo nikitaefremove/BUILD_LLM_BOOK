@@ -12,13 +12,19 @@ num_workers = 0
 
 # Create Datasets
 train_dataset = SpamDataset(
-    csv_file="fine-tuning-classification/data/train.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/train.csv",
+    tokenizer=tokenizer,
+    max_length=None,
 )
 test_dataset = SpamDataset(
-    csv_file="fine-tuning-classification/data/test.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/test.csv",
+    tokenizer=tokenizer,
+    max_length=None,
 )
 val_dataset = SpamDataset(
-    csv_file="fine-tuning-classification/data/validation.csv", tokenizer=tokenizer, max_length=None
+    csv_file="fine-tuning-classification/data/validation.csv",
+    tokenizer=tokenizer,
+    max_length=None,
 )
 
 # Create Dataloaders
@@ -47,13 +53,13 @@ val_loader = DataLoader(
 )
 
 
-for input_batch, target_batch in train_loader:
-    pass
+# for input_batch, target_batch in train_loader:
+#     pass
 
-print("Input batch dimensions:", input_batch.shape)
-print("Label batch dimensions", target_batch.shape)
+# print("Input batch dimensions:", input_batch.shape)
+# print("Label batch dimensions", target_batch.shape)
 
 
-print(f"{len(train_loader)} training batches")
-print(f"{len(val_loader)} validation batches")
-print(f"{len(test_loader)} test batches")
+# print(f"{len(train_loader)} training batches")
+# print(f"{len(val_loader)} validation batches")
+# print(f"{len(test_loader)} test batches")
