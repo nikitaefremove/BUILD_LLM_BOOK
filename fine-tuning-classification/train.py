@@ -15,7 +15,7 @@ start_time = time.time()
 torch.manual_seed(123)
 
 optimizer = torch.optim.AdamW(model.parameters(), lr=5e-5, weight_decay=0.1)
-num_epochs = 10
+num_epochs = 20
 
 train_losses, val_losses, train_accs, val_accs, examples_seen = train_classifier(
     model,
