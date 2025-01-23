@@ -1,0 +1,77 @@
+Nikita Efremov
+AI/ML Engineer
+
+AI/ML Engineer with over 3 years of experience in machine learning, specializing in large language models (LLMs), agent-based systems, 
+and virtual assistants. I have expertise in the full ML development lifecycle, including research, deployment, and model monitoring. 
+With experience in both large tech companies and startups, I excel in collaborative environments and thrive in high-responsibility roles.
+
+AI/ML Engineer LLM / Vivanti, London
+May 2024 - Present 
+
+Technologies and stack: FastAPI, Docker, Langchain, RAG, LLM-Agents, Agentic-RAG, Faiss, Qdrant, Milvus, Microservices, Figma, Linux, CI-CD, GitLab, Text-to-Speech, Speech-To-Text, OpenAI API, Claude API, YandexGPT API, PostgreSQL, Redis, Postman, Gunicorn.
+Projects:
+Developed virtual assistants for the company's European and Russian websites based on LLM agents (Multi-Agentic RAG). (vivanti.eu, vivanti.ru)
+Developed a virtual doctor-trainer service using LLM, multi-agents, speech-to-text, text-to-speech, and HeyGen to gamify the training of sales skills and product knowledge for medical representatives of pharmaceutical companies. (Article in UK Tech News)
+Achievements:
+Built ML services and department from scratch, positioning the company as a leader in AI for the pharmaceutical market.
+Attracted key AI partners, driving business growth and strengthening the company's market position.
+Additional:
+Experience speaking at AI-related events.
+
+ML Engineer LLM / Sberbank / Moscow
+
+Oct 2022 - May 2024
+
+Tools and technologies: Python, SQL, Numpy, Pandas, Pytorch, Transformers, Matplotlib, Scikit-learn, Postgres, GreenPlum, Git, Bitbucket, Docker, Linux, MLFlow, Bert, CatBoost.
+TF-IDF, PyPDF, Selenium.
+Projects:
+Created a RecSys service for convenient employee selection in internal audit using web scraping, NLP frameworks, Content-based approach.
+Created a Churn service analyzing hired and dismissed employees using Catboost model, PostgreSQL Database and interactive visualization through a dashboard.
+Achievements:
+Improved proposal classification accuracy in the audit report analysis service by 6% (F1 score) and reduced the model size by 10 times through distillation and fine-tuning.
+Doubled classification speed by optimizing and refactoring the tokenization and model inference code.
+Reduced recruitment expenses for internal audit positions by 9.4%.
+
+ML Engineer/ Open-Source, Moscow
+
+Feb 2021 - Oct 2022
+
+Tools and technologies: Python, SQL, Numpy, Pandas, Pytorch, Transformers, Matplotlib, Scikit-learn, Postgres, GreenPlum, Git, Bert, CatBoost, Selenium.
+Projects:
+Recommendation system: Built with FastAPI and CatBoost, integrating PostgreSQL. Uses a content-based approach with K-Means, OHE, and Pytorch/BERT embeddings.
+Phrase Similarity Analysis: Identifies similar phrases in text using cosine similarity with BERT embeddings.
+IMDb Data Scraping & Analysis: Collected data from IMDb's Top 250 using Selenium, performed EDA to uncover cinematic trends, such as top decade, director, and actor.
+
+Education:
+Master's degree in Economics (Economic Security)
+2014 - 2020, Russia, Michurinsk
+Michurinsk State Agrarian University
+
+Programming Languages
+Python, Bash, SQL
+
+Machine Learning Tools
+Pytorch, Transformers, Langchain, Scikit-learn, CatBoost, LightGBM, XGBoost, Numpy, Pandas, BERT, Large Language Models (LLMs), NLP (Natural Language Processing), RecSys, Text Classification, NER, Summarization, MLFlow, Model Distillation, Fine-tuning, Model Validation, Data Analysis, Feature Engineering, Web Scraping, Selenium, Postgres, GreenPlum, Matplotlib, Seaborn, Plotly, Dash, Qlik Sense, Tiktoken, Speech-To-Text, Text-To-Speech, Automatic Speech Recognition, Generative Models.
+
+Development Tools
+FastAPI, Pydantic, SQLAlchemy, Postman, Docker, CI-CD, PostgreSQL, Redis, Git, Bitbucket, GitLab, OpenAI API, Claude API, YandexGPT API, Faiss, Qdrant, Milvus, Linux, Figma, Gunicorn, Airflow, Microservices, Celery, Kubernetes. AWS, Google Cloud.
+
+Certificates
+IBM Data Science Professional Certificate,
+Data Science Math Skills - Duke University,
+Machine Learning Specialization - DeepLearning.AI & Stanford University,
+Start ML - KARPOV.COURSES,
+Process Mining - Sberbank,
+Machine Learning - Sberbank,
+Linear Algebra - Sberbank,
+Mathematical analysis - Sberbank,
+Working with Linux OS - Sberbank,
+GreenPlum - Sberbank,
+Statistics - Sberbank,
+LLM based AI product - Stepik,
+ChatGPT Prompt Engineering for Developers - DeepLearning.AI,
+Reinforcement Learning From Human Feedback - DeepLearning.AI,
+Multi AI Agent Systems with crewAI - DeepLearning.AI
+
+
+
