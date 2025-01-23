@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset
 
-from format_input import format_input
+from utils.data_processing.format_input import format_input
 
 
 class InstructionDataset(Dataset):

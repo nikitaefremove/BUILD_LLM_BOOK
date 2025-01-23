@@ -1,4 +1,4 @@
-from downloading_dataset import data
+from utils.data_processing.downloading_dataset import data
 
 
 train_portion = int(len(data) * 0.85)
