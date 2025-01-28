@@ -16,3 +16,5 @@ Book
 src/model_weights/model_and_optimizer.pth
 src/model_weights/gpt2
 model_and_optimizer.pth
+checkpoints
+weights
