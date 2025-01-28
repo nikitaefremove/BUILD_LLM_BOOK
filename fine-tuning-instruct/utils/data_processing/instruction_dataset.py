@@ -29,7 +29,7 @@ class InstructionDataset(Dataset):
 
         for entry in data:
             instruction_plus_input = format_input(entry)
-            response_text = f"\n\n ## Response: \n {entry["output"]}"
+            response_text = f'\n\n ## Response: \n {entry["output"]}'
             full_text = instruction_plus_input + response_text
 
             self.encoded_texts.append(tokenizer.encode(full_text))

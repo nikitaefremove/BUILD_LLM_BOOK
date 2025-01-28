@@ -1,4 +1,8 @@
 import torch
+from functools import partial
+
+
+device = "mps" if torch.mps.is_available() else "cpu"
 
 
 def custom_collate_fn(
@@ -19,7 +23,7 @@ def custom_collate_fn(
         tuple: A tuple containing two PyTorch tensors, `input_tensor` and `target_tensor`, where each tensor
         represents a batch of sequences.
     """
-    
+
     batch_max_length = max(len(item) + 1 for item in batch)
     input_1st, target_1st = [], []
 
@@ -48,3 +52,8 @@ def custom_collate_fn(
     target_tensor = torch.stack(target_1st).to(device)
 
     return input_tensor, target_tensor
+
+
+customized_collate_fn = partial(
+    custom_collate_fn, device=device, allowed_max_length=1024
+)
