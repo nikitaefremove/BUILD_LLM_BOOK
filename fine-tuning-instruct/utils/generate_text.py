@@ -11,10 +11,10 @@ tokenizer = tiktoken.get_encoding("gpt2")
 model = GPTModel(cfg=BASE_CONFIG)
 
 # Load model weights from .pth file if needed.
-state_dict = torch.load(
-    "fine-tuning-instruct/model/weights/model_and_optimizer.pth", weights_only=True
-)
-model.load_state_dict(state_dict["model_state_dict"])
+# state_dict = torch.load(
+#     "fine-tuning-instruct/model/weights/model_and_optimizer.pth", weights_only=True
+# )
+# model.load_state_dict(state_dict["model_state_dict"])
 
 
 def generate_text(

@@ -19,8 +19,12 @@ def calc_loss_batch(input_batch, target_batch, model, device):
 
     input_batch = input_batch.to(device)
     target_batch = target_batch.to(device)
-    logits = model(input_batch)[:, -1, :]
-    loss = torch.nn.functional.cross_entropy(logits, target_batch)
+
+    logits = model(input_batch)
+    logits_flat = logits.view(-1, logits.size(-1))
+    targets_flat = target_batch.view(-1)
+
+    loss = torch.nn.functional.cross_entropy(logits_flat, targets_flat)
 
     return loss
 
@@ -58,15 +62,11 @@ def calc_loss_loader(data_loader, model, device, num_batches=None):
 
             with torch.no_grad():
                 logits = model(input_batch)
-                predicted_labels = torch.argmax(logits, dim=-1)
+                logits_flat = logits.view(-1, logits.size(-1))
+                targets_flat = target_batch.view(-1)
 
-            # Ensure target_batch has the same shape as predicted_labels
-            if target_batch.shape != predicted_labels.shape:
-                target_batch = target_batch[:, : predicted_labels.shape[1]]
+                loss = torch.nn.functional.cross_entropy(logits_flat, targets_flat)
 
-            loss = torch.nn.functional.cross_entropy(
-                logits.view(-1, logits.size(-1)), target_batch.view(-1)
-            )
             total_loss += loss.item() * input_batch.size(0)
             num_examples += input_batch.size(0)
 
